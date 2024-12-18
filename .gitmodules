@@ -1,0 +1,3 @@
+[submodule "midgear"]
+	path = midgear
+	url = https://github.com/zameelismail/midgear.git
