@@ -20,17 +20,17 @@
    * colors
    */
 
-  --international-orange-engineering: hsl(1, 91%, 37%);
+  --international-orange-engineering: #CF0A0A;
   --cadet-blue-creyola: hsl(222, 14%, 69%);
-  --oxford-blue-1: hsl(222, 47%, 15%);
-  --oxford-blue-2: hsl(222, 44%, 14%);
-  --oxford-blue-3: hsl(222, 50%, 11%);
-  --sonic-silver: hsl(0, 0%, 44%);
-  --space-cadet: hsl(222, 44%, 18%);
-  --pastel-pink: hsl(1, 53%, 75%);
-  --eerie-black: hsl(0, 0%, 15%);
-  --light-gray: hsl(0, 0%, 80%);
-  --white: hsl(0, 0%, 100%);
+  --oxford-blue-1: hsl(0, 0%, 0%);
+  --oxford-blue-2: hsl(0, 0%, 0%);
+  --oxford-blue-3: hsl(0, 0%, 0%);
+  --sonic-silver: hsl(0, 0%, 0%);
+  --space-cadet: hsl(0, 0%, 0%);
+  --pastel-pink: #CF0A0A;
+  --eerie-black: hsl(0, 0%, 0%);
+  --light-gray: hsl(0, 0%, 4%);
+  --white: #EEEEEE;
 
   /**
    * typography
@@ -208,6 +208,7 @@ body {
 .h1,
 .h2,
 .h3,
+.h3-footer
 .display-1 {
   font-family: var(--ff-chakra-petch);
   font-weight: var(--fw-700);
@@ -224,7 +225,8 @@ body {
 }
 
 .h2,
-.h3 {
+.h3
+.h3-footer {
   color: var(--eerie-black);
   font-weight: var(--fw-600);
   line-height: 1.2;
@@ -233,6 +235,8 @@ body {
 .h2 { font-size: var(--fs-3); }
 
 .h3 { font-size: var(--fs-4); }
+
+.h3-footer { font-size: var(--fs-4); }
 
 .btn {
   background-color: var(--international-orange-engineering);
@@ -270,7 +274,7 @@ body {
   font-family: var(--ff-chakra-petch);
   text-transform: uppercase;
   color: var(--international-orange-engineering);
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-700)
 }
 
 .w-100 { width: 100%; }
@@ -623,12 +627,12 @@ body {
 }
 
 .social-link:is(:hover, :focus-visible) {
-  background-color: var(--international-orange-engineering);
+  background-color: var(--white);
   transform: translateY(-5px);
 }
 
 .footer .h3 {
-  color: var(--white);
+  color: #CF0A0A;
   margin-block-end: 18px;
 }
 
