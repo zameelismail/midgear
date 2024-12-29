@@ -20,14 +20,14 @@
    * colors
    */
 
-  --international-orange-engineering: #CF0A0A;
+  --international-orange-engineering: #B22222;
   --cadet-blue-creyola: hsl(222, 14%, 69%);
   --oxford-blue-1: hsl(0, 0%, 0%);
   --oxford-blue-2: hsl(0, 0%, 0%);
   --oxford-blue-3: hsl(0, 0%, 0%);
   --sonic-silver: hsl(0, 0%, 0%);
   --space-cadet: hsl(0, 0%, 0%);
-  --pastel-pink: #CF0A0A;
+  --pastel-pink: #B22222;
   --eerie-black: hsl(0, 0%, 0%);
   --light-gray: hsl(0, 0%, 4%);
   --white: #EEEEEE;
@@ -468,9 +468,12 @@ body {
 }
 
 .service-card .card-text {
-  line-height: 1.2;
-  margin-block: 8px;
+  line-height: 1;
+  margin-block: 10px;
+  font-size: 1.5rem;
 }
+
+.service-card .card-title{color: #B22222;}
 
 .service .btn { margin-inline: auto; }
 
@@ -552,7 +555,7 @@ body {
   margin-block-end: 5px;
 }
 
-.work-card .card-title { margin-block-end: 10px; }
+.work-card .card-title { margin-block-end: 10px;}
 
 .work-card .card-btn {
   background-color: var(--international-orange-engineering);
@@ -632,7 +635,7 @@ body {
 }
 
 .footer .h3 {
-  color: #CF0A0A;
+  color: #B22222;
   margin-block-end: 18px;
 }
 
@@ -1251,6 +1254,13 @@ body {
 
   }
 
+
+  @media screen and (max-width: 768px) {
+  body {
+    background: url('./assets/images/mobile.jpeg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
 
 
   /**
