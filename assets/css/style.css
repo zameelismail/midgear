@@ -346,6 +346,12 @@ body {
   align-items: center;
 }
 
+.logo {
+  max-width: 100%; /* Makes the logo responsive */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures no extra spacing around the image */
+}
+
 .logo img {
   max-width: 100%;
   max-height: 100%;
@@ -413,12 +419,13 @@ body {
 \*-----------------------------------*/
 
 .hero {
-  position: relative;
-  padding-block-start: calc(var(--section-padding) + 70px);
-  text-align: center;
-  z-index: 1;
-  overflow: hidden;
+  min-height: 100vh; /* Ensures the hero section covers at least the full viewport height. */
+  display: flex; /* Enables flexible box layout for better alignment. */
+  align-items: center; /* Vertically centers content. */
+  justify-content: center; /* Horizontally centers content. */
+  padding-block-start: 0; /* Removes additional padding for a clean fit. */
 }
+
 
 .hero .container {
   display: grid;
@@ -1255,10 +1262,78 @@ body {
   }
 
 
-  @media screen and (max-width: 768px) {
+/*-----------------------------------*\
+  #RESPONSIVE STYLES
+\*-----------------------------------*/
+
+/* Mobile Screens (up to 768px) */
+@media (max-width: 768px) {
+  /* Different background for mobile */
   body {
-    background: url('./assets/images/mobile.jpeg') no-repeat center center fixed;
+    background-color: hsl(0, 0%, 98%); /* Light gray for mobile */
+  }
+
+  .hero {
+    background-image: url('./assets/images/mobile.jpeg'); /* Mobile-specific background image */
     background-size: cover;
+    background-position: center;
+  }
+
+  .hero .section-title {
+    font-size: var(--fs-3); /* Adjust font size */
+  }
+
+  .header {
+    padding: 20px 10px; /* Adjust header padding */
+  }
+
+  .navbar {
+    width: 100%; /* Full-width navbar for mobile */
+    top: 60px;
+    right: 0;
+  }
+
+  .navbar-link {
+    font-size: var(--fs-6); /* Smaller font for links */
+    padding: 10px;
+  }
+
+  .service-card .card-title {
+    font-size: 1.2rem; /* Adjust card title size */
+  }
+
+  .section {
+    padding-block: 30px; /* Reduce section padding */
+  }
+
+  .btn {
+    padding: 10px 15px; /* Adjust button padding */
+  }
+
+  .about {
+    padding: 20px; /* Add padding for better spacing */
+  }
+  .header {
+    justify-content: center; /* Centers the logo on mobile */
+  }
+}
+
+/* Tablet Screens (up to 1024px) */
+@media (max-width: 1024px) {
+  body {
+    background-color: hsl(0, 0%, 95%); /* Slightly darker background */
+  }
+
+  .hero {
+    padding-block-start: calc(var(--section-padding) + 50px);
+  }
+
+  .service-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid */
+  }
+
+  .about .container {
+    gap: 30px; /* Reduce gap */
   }
 }
 
